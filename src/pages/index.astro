@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <h1 slot="title">SnackCode | Chuleta de Bootstrap</h1>
+
+  <header class="text-center py-4">
+    <h3 class="text-muted">Chuleta de Bootstrap</h3>
+  </header>
+
+  <div class="text-center my-1">
+    <a
+      href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+      target="_blank"
+      class="btn-cybercute-docs"
+      aria-label="Documentación oficial de Bootstrap"
+    >
+      <i class="bi bi-bookmark-heart"></i>Revisa la documentación oficial
+    </a>
+  </div>
+
+    <div class="position-relative w-75 mx-auto mt-3">
+      <i class="bi bi-search-heart search-icon"></i>
+      <input
+        type="text"
+        id="buscador"
+        class="form-control pastel-border ps-5"
+        placeholder="Buscar chuletas..."
+      />
+    </div>
+
+
+  <div class="container py-4">
+    <div class="row g-4" id="cheatsheet-grid">
+      <!-- Tarjetas de clases cheat se insertarán aquí -->
+    </div>
+  </div>
+  <script src="/js/main.js" defer></script>
+</Layout>

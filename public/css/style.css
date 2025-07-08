@@ -1,0 +1,271 @@
+:root {
+  /* 🎨 Colores de marca SnackCode */
+  --color-lavander-pink: #F6B6E0;
+  --color-neon-blue: #5373fb;
+  --color-cornflower-blue: #738BE7;
+  --color-jasmine: #F8DF8C;
+  --color-earth-yellow: #F6C079;
+  --color-atomic-tangerine: #f08a4b;
+  --color-rose-pink:#EB5CB9;
+  --color-smoke-black:#23262A;
+
+  /* 🌈 Gradiente general refinado (sin naranja) */
+  --gradient-cybercute: linear-gradient(90deg, 
+    var(--color-lavander-pink), 
+    var(--color-cornflower-blue)
+  );
+
+  /* 🎉 Banner pastel armonizado (sin naranja) */
+  --banner-construccion-bg: linear-gradient(90deg, 
+    var(--color-lavander-pink), 
+    var(--color-jasmine), 
+    var(--color-earth-yellow)
+  );
+}
+
+body {
+  background: linear-gradient(to bottom, #fffefc, #f9faff);
+  font-family: 'Nunito', 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+h1, h2, h3, .fw-bold {
+  font-weight: 800;
+  color: var(--color-cornflower-blue);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header p {
+  font-size: 1rem;
+  color: var(--color-earth-yellow);
+}
+
+.clase-card {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  border: 2px dashed var( --color-lavander-pink);
+}
+
+.clase-card:hover {
+  transform: scale(1.03);
+  background-color: var(--color-jasmine);
+  border-color: var( --color-lavander-pink);
+}
+
+.modal-contenido code {
+  display: block;
+  background: #fff;
+  padding: 1rem;
+  border-left: 4px solid var( --color-lavander-pink);
+  color: var(--color-atomic-tangerine);
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  font-family: 'Courier New', monospace;
+}
+
+.cerrar {
+  float: right;
+  border-radius: 50%;
+  padding: 0.2rem 0.6rem;
+  font-weight: bold;
+}
+
+.modal-cybercute {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-cybercute.show {
+  display: flex;
+}
+
+.modal-contenido {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+}
+
+#btn-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1050;
+  width: 48px;
+  height: 48px;
+  font-size: 1.25rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  background-color: var(--color-lavander-pink);
+  border-color: var(--color-lavander-pink);
+}
+
+#btn-top.show {
+  display: flex;
+  opacity: 1;
+}
+
+#btn-top:hover {
+  transform: scale(1.1);
+  background-color: var(--color-rose-pink);
+  border-color: var(--color-rose-pink);
+  color: var(--color-lavander-pink) !important;
+}
+
+#btn-top i:hover {
+  color: var(--color-lavander-pink) !important;
+}
+
+.banner-construccion {
+  background: var(--banner-construccion-bg);
+  background-size: 200% auto;
+  color: #333;
+  font-size: 1.1rem;
+  animation: shimmer 8s linear infinite;
+  border-bottom: 3px dashed var( --color-lavander-pink);
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.btn-cybercute-docs {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 9999px;
+  background: var(--color-lavander-pink);
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 6px rgba(60, 92, 222, 0.3);
+}
+
+.btn-cybercute-docs:hover {
+  background: var(--color-rose-pink);
+  color: #fff;
+  box-shadow: 0 0 12px var(--color-rose-pink);
+  transform: scale(1.05);
+}
+
+.resaltado {
+  background-color: var( --color-lavander-pink);
+  border-radius: 4px;
+  padding: 0 3px;
+}
+
+.pastel-border {
+  border: 2px solid var( --color-lavander-pink);
+  transition: 0.3s ease;
+}
+
+.pastel-border:focus {
+  border-color: var( --color-lavander-pink);
+  box-shadow: 0 0 0 0.2rem rgba(241, 142, 207, 0.25);
+}
+
+.alerta-copiado {
+  position: fixed;
+  bottom:10%;
+  right: 5%;
+  background: var(--color-jasmine);
+  color: #222;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px var(--color-jasmine);
+  z-index: 10000;
+  opacity: 0;
+  transform: translateY(0);
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.alerta-copiado.mostrar {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.titulos-tablas-recursos {
+  color: var(--color-neon-blue);
+}
+
+#recurso a:not(.btn) {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-neon-blue);
+  border-bottom: 2px dashed var(--color-cornflower-blue);
+  transition: all 0.3s ease;
+}
+
+#recurso a:not(.btn):hover {
+  color: var(--color-cornflower-blue);
+  background-color: #eef3ff;
+  border-radius: 6px;
+  padding: 2px 6px;
+  text-decoration: none;
+}
+
+.chuleta-terminal {
+  background-color: var(--color-smoke-black);
+  color: #eee;
+  border-radius: 10px;
+  padding: 1.5rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  overflow-x: auto;
+  position: relative;
+  border-left: 5px solid var(--color-neon-blue);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.chuleta-terminal::before {
+  content: "HTML + CSS";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--color-neon-blue);
+  color: var(--color-smoke-black);
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.7rem;
+  border-bottom-right-radius: 10px;
+}
+
+.chuleta-terminal code {
+  white-space: pre;
+  display: block;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: var(--color-persian-pink);
+  font-size: 1.2rem;
+  pointer-events: none;
+}

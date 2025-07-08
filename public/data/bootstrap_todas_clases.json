@@ -1,0 +1,856 @@
+[
+  {
+    "id": "accordion-body",
+    "title": ".accordion-body",
+    "description": "Contenedor del contenido interno del acordeón. Aquí se coloca el texto o elementos visibles cuando se despliega.",
+    "example": "<div class=\"accordion-body\">Ejemplo de .accordion-body</div>",
+    "category": "Accordion"
+  },
+  {
+    "id": "accordion-button",
+    "title": ".accordion-button",
+    "description": "Botón interactivo que permite abrir o cerrar una sección del acordeón. Se usa dentro del encabezado.",
+    "example": "<button class=\"accordion-button\">Ejemplo de .accordion-button</button>",
+    "category": "Accordion"
+  },
+  {
+    "id": "accordion-collapse",
+    "title": ".accordion-collapse",
+    "description": "Sección que colapsa o se expande. Encierra el contenido desplegable que se muestra cuando se activa el botón del acordeón.",
+    "example": "<div class=\"accordion-collapse collapse show\">Ejemplo de .accordion-collapse</div>",
+    "category": "Accordion"
+  },
+  {
+    "id": "alert-danger",
+    "title": ".alert-danger",
+    "description": "Cuadro de alerta con estilo rojo. Se usa para mostrar errores, advertencias críticas o mensajes de peligro.",
+    "example": "<div class=\"alert alert-danger\" role=\"alert\">¡Error crítico detectado!</div>",
+    "category": "Alerts"
+  },
+  {
+    "id": "alert-info",
+    "title": ".alert-info",
+    "description": "Cuadro de alerta con estilo celeste. Se usa para mostrar información útil o mensajes neutrales.",
+    "example": "<div class=\"alert alert-info\" role=\"alert\">Este es un mensaje informativo.</div>",
+    "category": "Alerts"
+  },
+  {
+    "id": "alert-light",
+    "title": ".alert-light",
+    "description": "Alerta de estilo suave con fondo gris claro. Ideal para mensajes neutros o poco intrusivos.",
+    "example": "<div class=\"alert alert-light\" role=\"alert\">Este es un mensaje muy suave 🌫️</div>",
+    "category": "Alerts"
+  },
+  {
+    "id": "alert-success",
+    "title": ".alert-success",
+    "description": "Alerta verde que indica éxito o una acción completada correctamente.",
+    "example": "<div class=\"alert alert-success\" role=\"alert\">¡Guardado con éxito! ✅</div>",
+    "category": "Alerts"
+  },
+  {
+    "id": "alert-warning",
+    "title": ".alert-warning",
+    "description": "Alerta amarilla para advertencias o precauciones importantes.",
+    "example": "<div class=\"alert alert-warning\" role=\"alert\">⚠ Atención: Revisa los campos obligatorios</div>",
+    "category": "Alerts"
+  },
+  {
+    "id": "align-items-center",
+    "title": ".align-items-center",
+    "description": "Centra verticalmente todos los elementos hijos dentro de un contenedor con display flex.",
+    "example": "<div class=\"d-flex align-items-center\" style=\"height: 100px;\"><div>🎯 Elemento centrado verticalmente</div></div>",
+    "category": "Flexbox"
+  },
+  {
+    "id": "align-self-center",
+    "title": ".align-self-center",
+    "description": "Centra verticalmente un solo elemento dentro de un contenedor con flexbox.",
+    "example": "<div class=\"d-flex\" style=\"height: 100px;\"><div class=\"align-self-center\">🧩 Solo yo me centro</div></div>",
+    "category": "Flexbox"
+  },
+  {
+    "id": "align-self-end",
+    "title": ".align-self-end",
+    "description": "Alinea un solo elemento al fondo del eje vertical en un contenedor flex.",
+    "example": "<div class=\"d-flex\" style=\"height: 100px;\"><div class=\"align-self-end\">🔽 Estoy abajo</div></div>",
+    "category": "Flexbox"
+  },
+  {
+    "id": "align-self-start",
+    "title": ".align-self-start",
+    "description": "Alinea un solo elemento al inicio del eje vertical en un contenedor flex.",
+    "example": "<div class=\"d-flex\" style=\"height: 100px;\"><div class=\"align-self-start\">🔼 Estoy arriba</div></div>",
+    "category": "Flexbox"
+  },
+  {
+    "id": "badge",
+    "title": ".badge",
+    "description": "Clase base para crear insignias pequeñas y destacadas que acompañan a texto, botones o iconos.",
+    "example": "<span class=\"badge bg-secondary\">Nuevo</span>",
+    "category": "Badges"
+  },
+  {
+    "id": "badge-danger",
+    "title": ".badge-danger",
+    "description": "Insignia de color rojo, ideal para advertencias, errores o cantidades críticas.",
+    "example": "<span class=\"badge bg-danger\">¡Urgente! 🔥</span>",
+    "category": "Badges"
+  },
+  {
+    "id": "badge-dark",
+    "title": ".badge-dark",
+    "description": "Insignia con fondo oscuro. Útil para interfaces sobrias o neutras.",
+    "example": "<span class=\"badge bg-dark text-white\">Modo oscuro 🕶️</span>",
+    "category": "Badges"
+  },
+  {
+    "id": "badge-info",
+    "title": ".badge-info",
+    "description": "Insignia con fondo celeste. Se usa para información adicional o neutra.",
+    "example": "<span class=\"badge bg-info text-dark\">Info ℹ️</span>",
+    "category": "Badges"
+  },
+  {
+    "id": "badge-primary",
+    "title": ".badge-primary",
+    "description": "Insignia de color azul Bootstrap. Ideal para destacar estados principales o elementos nuevos.",
+    "example": "<span class=\"badge bg-primary\">Primario ✨</span>",
+    "category": "Badges"
+  },
+  {
+    "id": "badge-success",
+    "title": ".badge-success",
+    "description": "Insignia verde para indicar que algo ha ido bien o está activo.",
+    "example": "<span class=\"badge bg-success\">Correcto ✅</span>",
+    "category": "Badges"
+  },
+  {
+    "id": "badge-warning",
+    "title": ".badge-warning",
+    "description": "Insignia amarilla para advertencias leves o elementos importantes que requieren atención.",
+    "example": "<span class=\"badge bg-warning text-dark\">¡Atento! ⚠️</span>",
+    "category": "Badges"
+  },
+  {
+    "id": "bg-danger",
+    "title": ".bg-danger",
+    "description": "Aplica un fondo rojo al elemento. Ideal para alertas o destacar errores.",
+    "example": "<div class=\"bg-danger text-white p-2\">Fondo rojo de alerta ❌</div>",
+    "category": "Colors"
+  },
+  {
+    "id": "bg-primary",
+    "title": ".bg-primary",
+    "description": "Aplica el color de fondo principal del tema (azul Bootstrap). Se usa para encabezados, botones, secciones destacadas, etc.",
+    "example": "<div class=\"bg-primary text-white p-2\">Fondo azul principal 🔷</div>",
+    "category": "Colors"
+  },
+  {
+    "id": "bg-success",
+    "title": ".bg-success",
+    "description": "Aplica un fondo verde, ideal para indicar éxito, confirmaciones o elementos completados.",
+    "example": "<div class=\"bg-success text-white p-2\">Fondo de éxito ✅</div>",
+    "category": "Colors"
+  },
+  {
+    "id": "border",
+    "title": ".border",
+    "description": "Añade un borde gris claro alrededor del elemento.",
+    "example": "<div class=\"border p-2\">Elemento con borde 🧱</div>",
+    "category": "Borders"
+  },
+  {
+    "id": "border-1",
+    "title": ".border-1",
+    "description": "Define un grosor fino de borde. Se debe combinar con `.border` y color si se desea personalizar más.",
+    "example": "<div class=\"border border-1 p-2\">Borde fino 📏</div>",
+    "category": "Borders"
+  },
+  {
+    "id": "btn",
+    "title": ".btn",
+    "description": "Clase base para todos los botones en Bootstrap. Se debe combinar con variantes como `.btn-primary`, `.btn-success`, etc.",
+    "example": "<button class=\"btn btn-secondary\">Botón básico 🖱️</button>",
+    "category": "Buttons"
+  },
+  {
+    "id": "btn-danger",
+    "title": ".btn-danger",
+    "description": "Botón rojo, usado para acciones destructivas o importantes como eliminar o cancelar.",
+    "example": "<button class=\"btn btn-danger\">Eliminar ❌</button>",
+    "category": "Buttons"
+  },
+  {
+    "id": "btn-dark",
+    "title": ".btn-dark",
+    "description": "Botón con fondo oscuro. Ideal para interfaces oscuras o sobrias.",
+    "example": "<button class=\"btn btn-dark\">Modo oscuro 🕶️</button>",
+    "category": "Buttons"
+  },
+  {
+    "id": "btn-light",
+    "title": ".btn-light",
+    "description": "Botón claro con fondo gris suave. Perfecto para interfaces limpias y minimalistas.",
+    "example": "<button class=\"btn btn-light\">Botón claro 💡</button>",
+    "category": "Buttons"
+  },
+  {
+    "id": "btn-outline-danger",
+    "title": ".btn-outline-danger",
+    "description": "Botón con borde rojo y fondo transparente. Ideal para acciones destructivas sin un estilo visual agresivo.",
+    "example": "<button class=\"btn btn-outline-danger\">Cancelar ❌</button>",
+    "category": "Buttons"
+  },
+  {
+    "id": "btn-outline-dark",
+    "title": ".btn-outline-dark",
+    "description": "Botón con borde oscuro y fondo transparente. Funciona bien en diseños minimalistas o neutros.",
+    "example": "<button class=\"btn btn-outline-dark\">Modo sobrio 🖤</button>",
+    "category": "Buttons"
+  },
+  {
+    "id": "btn-outline-info",
+    "title": ".btn-outline-info",
+    "description": "Botón con borde celeste claro, ideal para acciones informativas o neutras.",
+    "example": "<button class=\"btn btn-outline-info\">Más info ℹ️</button>",
+    "category": "Buttons"
+  },
+  {
+    "id": "btn-outline-light",
+    "title": ".btn-outline-light",
+    "description": "Botón con borde gris claro. Funciona bien sobre fondos oscuros para crear contraste.",
+    "example": "<button class=\"btn btn-outline-light\">Claro sobre oscuro 💡</button>",
+    "category": "Buttons"
+  },
+  {
+    "id": "btn-outline-success",
+    "title": ".btn-outline-success",
+    "description": "Botón con borde verde. Indica acciones positivas o confirmaciones con un estilo más discreto.",
+    "example": "<button class=\"btn btn-outline-success\">Confirmar ✅</button>",
+    "category": "Buttons"
+  },
+  {
+    "id": "btn-primary",
+    "title": ".btn-primary",
+    "description": "Botón principal con fondo azul Bootstrap. Se usa para la acción más importante de la interfaz.",
+    "example": "<button class=\"btn btn-primary\">Enviar 📤</button>",
+    "category": "Buttons"
+  },
+  {
+    "id": "card",
+    "title": ".card",
+    "description": "Contenedor visual con borde, sombra y padding. Se usa para presentar contenido agrupado como productos, perfiles o secciones.",
+    "example": "<div class=\"card\" style=\"width: 18rem;\"><div class=\"card-body\">Contenido de la tarjeta 🃏</div></div>",
+    "category": "Cards"
+  },
+  {
+    "id": "card-body",
+    "title": ".card-body",
+    "description": "Sección interior de una tarjeta `.card`. Aquí se colocan el texto, botones u otros elementos.",
+    "example": "<div class=\"card\"><div class=\"card-body\">Texto dentro de la tarjeta 📄</div></div>",
+    "category": "Cards"
+  },
+  {
+    "id": "carousel",
+    "title": ".carousel",
+    "description": "Componente deslizante para mostrar imágenes o contenido en secuencia. Requiere configuración adicional para funcionar.",
+    "example": "<div id=\"demo\" class=\"carousel slide\" data-bs-ride=\"carousel\"><div class=\"carousel-inner\"><div class=\"carousel-item active\">Slide 1 🎠</div></div></div>",
+    "category": "Carousel"
+  },
+  {
+    "id": "carousel-item",
+    "title": ".carousel-item",
+    "description": "Elemento individual dentro de un `.carousel`. Representa cada 'diapositiva'.",
+    "example": "<div class=\"carousel-item active\"><img src=\"https://via.placeholder.com/300x150\" class=\"d-block w-100\" alt=\"Ejemplo\" /></div>",
+    "category": "Carousel"
+  },
+  {
+    "id": "col-6",
+    "title": ".col-6",
+    "description": "Columna de 6/12 (50%) en el sistema de grid de Bootstrap. Se utiliza dentro de un `.row`.",
+    "example": "<div class=\"row\"><div class=\"col-6 bg-light p-2\">Mitad de la fila 📏</div><div class=\"col-6 bg-secondary text-white p-2\">Otra mitad</div></div>",
+    "category": "Grid"
+  },
+  {
+    "id": "collapse",
+    "title": ".collapse",
+    "description": "Clase que permite ocultar o mostrar contenido dinámicamente (por ejemplo, al hacer clic en un botón).",
+    "example": "<div class=\"collapse show\">Contenido visible 🔽</div>",
+    "category": "Collapse"
+  },
+  {
+    "id": "d-flex",
+    "title": ".d-flex",
+    "description": "Convierte un contenedor en un flexbox. Es el punto de partida para usar utilidades como `.justify-content-*` o `.align-items-*`.",
+    "example": "<div class=\"d-flex gap-3\"><div>🍓</div><div>🍇</div><div>🍉</div></div>",
+    "category": "Flexbox"
+  },
+  {
+    "id": "dropdown",
+    "title": ".dropdown",
+    "description": "Contenedor principal para un menú desplegable. Debe incluir un botón y una lista `.dropdown-menu` para funcionar correctamente.",
+    "example": "<div class=\"dropdown\"><button class=\"btn btn-secondary dropdown-toggle\" data-bs-toggle=\"dropdown\">Menú ▼</button><ul class=\"dropdown-menu\"><li><a class=\"dropdown-item\" href=\"#\">Opción 1</a></li></ul></div>",
+    "category": "Dropdowns"
+  },
+  {
+    "id": "dropdown-menu",
+    "title": ".dropdown-menu",
+    "description": "Lista de elementos que se muestra al hacer clic en un botón `.dropdown-toggle`. Funciona dentro de un contenedor `.dropdown`.",
+    "example": "<ul class=\"dropdown-menu show\"><li><a class=\"dropdown-item\" href=\"#\">Opción 1</a></li></ul>",
+    "category": "Dropdowns"
+  },
+  {
+    "id": "flex-column",
+    "title": ".flex-column",
+    "description": "Organiza los elementos hijos en una columna vertical dentro de un contenedor con display flex.",
+    "example": "<div class=\"d-flex flex-column gap-2\"><div>🔼 Arriba</div><div>⬇️ Abajo</div></div>",
+    "category": "Flexbox"
+  },
+  {
+    "id": "flex-row",
+    "title": ".flex-row",
+    "description": "Organiza los elementos hijos en una fila horizontal dentro de un contenedor con display flex. Es el valor por defecto en `.d-flex`.",
+    "example": "<div class=\"d-flex flex-row gap-3\"><div>⬅️</div><div>➡️</div></div>",
+    "category": "Flexbox"
+  },
+  {
+    "id": "form-control",
+    "title": ".form-control",
+    "description": "Estiliza campos de formulario como `input`, `textarea` o `select` para que se vean consistentes con el diseño Bootstrap.",
+    "example": "<input type=\"text\" class=\"form-control\" placeholder=\"Escribe tu nombre\">",
+    "category": "Forms"
+  },
+  {
+    "id": "form-label",
+    "title": ".form-label",
+    "description": "Aplica estilos consistentes a las etiquetas (`label`) en formularios.",
+    "example": "<label for=\"nombre\" class=\"form-label\">Nombre:</label>",
+    "category": "Forms"
+  },
+  {
+    "id": "fs-1",
+    "title": ".fs-1",
+    "description": "Tamaño de fuente más grande de Bootstrap. Ideal para títulos principales.",
+    "example": "<div class=\"fs-1\">Texto muy grande 🔠</div>",
+    "category": "Typography"
+  },
+  {
+    "id": "fs-2",
+    "title": ".fs-2",
+    "description": "Tamaño de fuente grande, ligeramente menor que `.fs-1`.",
+    "example": "<div class=\"fs-2\">Texto grande 🔡</div>",
+    "category": "Typography"
+  },
+  {
+    "id": "fs-3",
+    "title": ".fs-3",
+    "description": "Tamaño de fuente mediano-alto, ideal para subtítulos destacados.",
+    "example": "<div class=\"fs-3\">Texto destacado 📢</div>",
+    "category": "Typography"
+  },
+  {
+    "id": "fs-4",
+    "title": ".fs-4",
+    "description": "Tamaño de fuente moderadamente grande. Útil para encabezados pequeños.",
+    "example": "<div class=\"fs-4\">Subtítulo 🔤</div>",
+    "category": "Typography"
+  },
+  {
+    "id": "fs-5",
+    "title": ".fs-5",
+    "description": "Tamaño de fuente ligeramente más grande que el texto base.",
+    "example": "<div class=\"fs-5\">Texto con énfasis ✍️</div>",
+    "category": "Typography"
+  },
+  {
+    "id": "fs-6",
+    "title": ".fs-6",
+    "description": "Tamaño de fuente más pequeño de la serie `.fs-*`.",
+    "example": "<div class=\"fs-6\">Texto discreto 📄</div>",
+    "category": "Typography"
+  },
+  {
+    "id": "fst-italic",
+    "title": ".fst-italic",
+    "description": "Aplica estilo en cursiva al texto.",
+    "example": "<div class=\"fst-italic\">Texto en cursiva ✒️</div>",
+    "category": "Typography"
+  },
+  {
+    "id": "fst-normal",
+    "title": ".fst-normal",
+    "description": "Elimina la cursiva de un elemento que la tenga aplicada.",
+    "example": "<div class=\"fst-normal\">Texto normal 📝</div>",
+    "category": "Typography"
+  },
+  {
+    "id": "fw-bold",
+    "title": ".fw-bold",
+    "description": "Aplica negrita al texto.",
+    "example": "<div class=\"fw-bold\">Texto en negrita 💪</div>",
+    "category": "Typography"
+  },
+  {
+    "id": "fw-light",
+    "title": ".fw-light",
+    "description": "Aplica un peso de fuente más delgado. Ideal para diseños más elegantes o minimalistas.",
+    "example": "<div class=\"fw-light\">Texto con peso ligero ✨</div>",
+    "category": "Typography"
+  },
+  {
+    "id": "fw-normal",
+    "title": ".fw-normal",
+    "description": "Restaura el peso de fuente al valor normal por defecto.",
+    "example": "<div class=\"fw-normal\">Texto normal 📝</div>",
+    "category": "Typography"
+  },
+  {
+    "id": "h-100",
+    "title": ".h-100",
+    "description": "Hace que el elemento ocupe el 100% de la altura disponible de su contenedor.",
+    "example": "<div class=\"h-100 border p-2\" style=\"min-height: 100px;\">Altura completa 🔝</div>",
+    "category": "Typography"
+  },
+  {
+    "id": "img-fluid",
+    "title": ".img-fluid",
+    "description": "Hace que una imagen se escale de forma responsive dentro de su contenedor.",
+    "example": "<img src=\"https://via.placeholder.com/150\" class=\"img-fluid\" alt=\"Imagen responsive\">",
+    "category": "Componentes"
+  },
+  {
+    "id": "justify-content-center",
+    "title": ".justify-content-center",
+    "description": "Centra horizontalmente los elementos en un contenedor flex.",
+    "example": "<div class=\"d-flex justify-content-center border\"><div>🎯 Centrado</div></div>",
+    "category": "Flexbox"
+  },
+  {
+    "id": "lh-1",
+    "title": ".lh-1",
+    "description": "Reduce la altura de línea (line-height) para texto más compacto.",
+    "example": "<p class=\"lh-1\">Texto<br>con altura<br>de línea compacta</p>",
+    "category": "Typography"
+  },
+  {
+    "id": "lh-lg",
+    "title": ".lh-lg",
+    "description": "Aplica una altura de línea más amplia, ideal para mejorar la legibilidad.",
+    "example": "<p class=\"lh-lg\">Texto<br>con más espacio<br>entre líneas</p>",
+    "category": "Typography"
+  },
+  {
+    "id": "lh-sm",
+    "title": ".lh-sm",
+    "description": "Reduce la altura de línea respecto al valor por defecto.",
+    "example": "<p class=\"lh-sm\">Texto<br>más ajustado<br>verticalmente</p>",
+    "category": "Typography"
+  },
+  {
+    "id": "list-group",
+    "title": ".list-group",
+    "description": "Contenedor para listas visuales estilizadas. Se suele usar con `.list-group-item`.",
+    "example": "<ul class=\"list-group\"><li class=\"list-group-item\">Elemento 1</li><li class=\"list-group-item\">Elemento 2</li></ul>",
+    "category": "Cards"
+  },
+  {
+    "id": "list-group-flush",
+    "title": ".list-group-flush",
+    "description": "Elimina los bordes y el padding alrededor de los elementos en una lista para integrarla con tarjetas o contenedores.",
+    "example": "<ul class=\"list-group list-group-flush\"><li class=\"list-group-item\">Sin bordes extra</li></ul>",
+    "category": "List group"
+  },
+  {
+    "id": "list-group-item",
+    "title": ".list-group-item",
+    "description": "Elemento individual dentro de una lista `.list-group`.",
+    "example": "<li class=\"list-group-item\">Elemento con estilo de lista</li>",
+    "category": "List group"
+  },
+  {
+    "id": "list-group-item-action",
+    "title": ".list-group-item-action",
+    "description": "Convierte un `.list-group-item` en un elemento interactivo, como enlace o botón.",
+    "example": "<a href=\"#\" class=\"list-group-item list-group-item-action\">Haz clic aquí</a>",
+    "category": "List group"
+  },
+  {
+    "id": "m-3",
+    "title": ".m-3",
+    "description": "Aplica un margen uniforme en todos los lados del elemento (espaciado 3).",
+    "example": "<div class=\"bg-light border m-3\">Con margen alrededor 📦</div>",
+    "category": "Spacing"
+  },
+  {
+    "id": "mb-0",
+    "title": ".mb-0",
+    "description": "Elimina el margen inferior de un elemento.",
+    "example": "<p class=\"mb-0\">Sin margen debajo 👇</p>",
+    "category": "Spacing"
+  },
+  {
+    "id": "modal",
+    "title": ".modal",
+    "description": "Contenedor principal de un cuadro de diálogo emergente en Bootstrap.",
+    "example": "<pre><code>&lt;div class=\"modal fade\" tabindex=\"-1\"&gt;\n  &lt;div class=\"modal-dialog\"&gt;\n    &lt;div class=\"modal-content\"&gt;\n      Contenido del modal\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;</code></pre>",
+    "category": "Modal"
+  },
+  {
+    "id": "modal-content",
+    "title": ".modal-content",
+    "description": "Caja blanca con padding y sombra donde se coloca el contenido del modal.",
+    "example": "<div class=\"modal-content p-3\">Contenido del modal 🧾</div>",
+    "category": "Modal"
+  },
+  {
+    "id": "modal-dialog",
+    "title": ".modal-dialog",
+    "description": "Contenedor del modal que controla su anchura y alineación.",
+    "example": "<div class=\"modal-dialog\"><div class=\"modal-content\">Contenido centrado</div></div>",
+    "category": "Modal"
+  },
+  {
+    "id": "modal-footer",
+    "title": ".modal-footer",
+    "description": "Sección inferior del modal, usada normalmente para botones de acción como 'Aceptar' o 'Cancelar'.",
+    "example": "<div class=\"modal-footer\"><button class=\"btn btn-secondary\">Cerrar</button></div>",
+    "category": "Modal"
+  },
+  {
+    "id": "modal-header",
+    "title": ".modal-header",
+    "description": "Encabezado del modal. Suele contener el título y el botón de cerrar.",
+    "example": "<div class=\"modal-header\"><h5 class=\"modal-title\">Título</h5><button class=\"btn-close\"></button></div>",
+    "category": "Modal"
+  },
+  {
+    "id": "modal-title",
+    "title": ".modal-title",
+    "description": "Estilo aplicado al texto del título dentro del encabezado del modal.",
+    "example": "<h5 class=\"modal-title\">Título del modal 🗨️</h5>",
+    "category": "Modal"
+  },
+  {
+    "id": "mt-5",
+    "title": ".mt-5",
+    "description": "Agrega un margen superior (top) grande. Útil para separar secciones verticalmente.",
+    "example": "<div class=\"bg-light mt-5 p-2\">Separado hacia abajo 🔽</div>",
+    "category": "Spacing"
+  },
+  {
+    "id": "mx-auto",
+    "title": ".mx-auto",
+    "description": "Centra horizontalmente un elemento usando margen automático en los lados.",
+    "example": "<div class=\"bg-light w-50 mx-auto p-2\">Centrado horizontal 🧲</div>",
+    "category": "Spacing"
+  },
+  {
+    "id": "nav-item",
+    "title": ".nav-item",
+    "description": "Elemento individual dentro de una barra de navegación.",
+    "example": "<li class=\"nav-item\"><a href=\"#\" class=\"nav-link\">Inicio</a></li>",
+    "category": "Navbar"
+  },
+  {
+    "id": "nav-link",
+    "title": ".nav-link",
+    "description": "Estilo aplicado a los enlaces dentro de `.nav-item`.",
+    "example": "<a class=\"nav-link active\" href=\"#\">Activa 💡</a>",
+    "category": "Navbar"
+  },
+  {
+    "id": "nav-pills",
+    "title": ".nav-pills",
+    "description": "Aplica estilo tipo 'píldora' a los botones de navegación.",
+    "example": "<ul class=\"nav nav-pills\"><li class=\"nav-item\"><a class=\"nav-link active\" href=\"#\">Activa</a></li></ul>",
+    "category": "Navbar"
+  },
+  {
+    "id": "nav-tabs",
+    "title": ".nav-tabs",
+    "description": "Estilo para crear pestañas de navegación.",
+    "example": "<ul class=\"nav nav-tabs\"><li class=\"nav-item\"><a class=\"nav-link active\" href=\"#\">Pestaña</a></li></ul>",
+    "category": "Navbar"
+  },
+  {
+    "id": "navbar",
+    "title": ".navbar",
+    "description": "Contenedor principal de la barra de navegación de Bootstrap.",
+    "example": "<nav class=\"navbar bg-light\"><div class=\"container-fluid\">Navbar 🧭</div></nav>",
+    "category": "Navbar"
+  },
+  {
+    "id": "navbar-brand",
+    "title": ".navbar-brand",
+    "description": "Elemento usado para mostrar el logo o nombre de la marca dentro de `.navbar`.",
+    "example": "<a class=\"navbar-brand\" href=\"#\">MiMarca 🚀</a>",
+    "category": "Navbar"
+  },
+  {
+    "id": "navbar-dark",
+    "title": ".navbar-dark",
+    "description": "Estilo oscuro para la navbar (se usa junto con `bg-dark`). Cambia el color del texto a claro.",
+    "example": "<nav class=\"navbar navbar-dark bg-dark\"><div class=\"container-fluid\"><a class=\"navbar-brand\" href=\"#\">DarkNav</a></div></nav>",
+    "category": "Navbar"
+  },
+  {
+    "id": "navbar-light",
+    "title": ".navbar-light",
+    "description": "Estilo claro para la navbar. Ideal para usar con fondos blancos o suaves.",
+    "example": "<nav class=\"navbar navbar-light bg-light\"><a class=\"navbar-brand\" href=\"#\">LightNav</a></nav>",
+    "category": "Navbar"
+  },
+  {
+    "id": "navbar-toggler",
+    "title": ".navbar-toggler",
+    "description": "Botón que activa el menú responsive en dispositivos pequeños.",
+    "example": "<button class=\"navbar-toggler\" type=\"button\"><span class=\"navbar-toggler-icon\"></span></button>",
+    "category": "Navbar"
+  },
+  {
+    "id": "order-#",
+    "title": ".order-#",
+    "description": "Cambia el orden visual de un elemento en un contenedor con flexbox. `#` puede ir de 0 a 5.",
+    "example": "<div class=\"d-flex\"><div class=\"order-2\">Segundo</div><div class=\"order-1\">Primero</div></div>",
+    "category": "Grid"
+  },
+  {
+    "id": "order-lg-#",
+    "title": ".order-lg-#",
+    "description": "Modifica el orden visual del elemento en pantallas grandes (`lg`) o superiores.",
+    "example": "<div class=\"d-flex\"><div class=\"order-lg-2\">Columna 2</div><div class=\"order-lg-1\">Columna 1</div></div>",
+    "category": "Grid"
+  },
+  {
+    "id": "overflow-auto",
+    "title": ".overflow-auto",
+    "description": "Agrega scroll automático si el contenido desborda el contenedor.",
+    "example": "<div class=\"overflow-auto border\" style=\"max-height: 60px;\">Contenido muy largo que activará scroll si es necesario 📜</div>",
+    "category": "Misc"
+  },
+  {
+    "id": "p-3",
+    "title": ".p-3",
+    "description": "Agrega padding (relleno interno) uniforme en todos los lados (nivel 3).",
+    "example": "<div class=\"bg-light p-3 border\">Con padding interno 📦</div>",
+    "category": "Spacing"
+  },
+  {
+    "id": "page-item",
+    "title": ".page-item",
+    "description": "Elemento individual dentro de una paginación.",
+    "example": "<li class=\"page-item\"><a class=\"page-link\" href=\"#\">1</a></li>",
+    "category": "Pagination"
+  },
+  {
+    "id": "pagination",
+    "title": ".pagination",
+    "description": "Contenedor de paginación. Agrupa los `.page-item` para moverse entre páginas.",
+    "example": "<ul class=\"pagination\"><li class=\"page-item active\"><a class=\"page-link\" href=\"#\">1</a></li></ul>",
+    "category": "Pagination"
+  },
+  {
+    "id": "position-relative",
+    "title": ".position-relative",
+    "description": "Establece el posicionamiento relativo para el elemento. Necesario si vas a posicionar hijos con `position-absolute`.",
+    "example": "<div class=\"position-relative border\" style=\"height: 100px;\"><div class=\"position-absolute top-0 end-0\">📌</div></div>",
+    "category": "Positioning"
+  },
+  {
+    "id": "rounded-circle",
+    "title": ".rounded-circle",
+    "description": "Convierte el elemento en un círculo perfecto (si el alto y ancho son iguales).",
+    "example": "<img src=\"https://via.placeholder.com/100\" class=\"rounded-circle\" alt=\"Avatar redondo\">",
+    "category": "Borders"
+  },
+  {
+    "id": "row",
+    "title": ".row",
+    "description": "Contenedor para columnas en el sistema de grid. Debe contener `.col-*` dentro.",
+    "example": "<div class=\"row\"><div class=\"col\">Columna 1</div><div class=\"col\">Columna 2</div></div>",
+    "category": "Grid"
+  },
+  {
+    "id": "shadow",
+    "title": ".shadow",
+    "description": "Agrega una sombra suave alrededor del elemento.",
+    "example": "<div class=\"shadow p-3 bg-white\">Sombra suave ☁️</div>",
+    "category": "Misc"
+  },
+  {
+    "id": "shadow-lg",
+    "title": ".shadow-lg",
+    "description": "Aplica una sombra grande al elemento.",
+    "example": "<div class=\"shadow-lg p-3 bg-white\">Sombra grande 🌥️</div>",
+    "category": "Misc"
+  },
+  {
+    "id": "shadow-sm",
+    "title": ".shadow-sm",
+    "description": "Aplica una sombra pequeña y sutil.",
+    "example": "<div class=\"shadow-sm p-3 bg-white\">Sombra pequeña 🕳️</div>",
+    "category": "Misc"
+  },
+  {
+    "id": "spinner-border",
+    "title": ".spinner-border",
+    "description": "Muestra un spinner circular animado para indicar carga o espera.",
+    "example": "<div class=\"spinner-border\" role=\"status\"><span class=\"visually-hidden\">Cargando...</span></div>",
+    "category": "Spinner"
+  },
+  {
+    "id": "spinner-grow",
+    "title": ".spinner-grow",
+    "description": "Muestra un spinner que se expande. Alternativa a `.spinner-border`.",
+    "example": "<div class=\"spinner-grow\" role=\"status\"><span class=\"visually-hidden\">Cargando...</span></div>",
+    "category": "Spinner"
+  },
+  {
+    "id": "sticky-top",
+    "title": ".sticky-top",
+    "description": "Hace que el elemento quede fijo en la parte superior al hacer scroll.",
+    "example": "<div class=\"sticky-top bg-light p-2\">Soy sticky 🔝</div>",
+    "category": "Positioning"
+  },
+  {
+    "id": "table",
+    "title": ".table",
+    "description": "Aplica estilo básico a tablas: bordes claros y formato limpio.",
+    "example": "<table class=\"table\"><thead><tr><th>Col</th></tr></thead><tbody><tr><td>Dato</td></tr></tbody></table>",
+    "category": "Tables"
+  },
+  {
+    "id": "table-bordered",
+    "title": ".table-bordered",
+    "description": "Agrega bordes a todas las celdas de la tabla.",
+    "example": "<table class=\"table table-bordered\"><tr><td>Con borde</td></tr></table>",
+    "category": "Tables"
+  },
+  {
+    "id": "table-striped",
+    "title": ".table-striped",
+    "description": "Aplica bandas de color alternas a las filas de la tabla.",
+    "example": "<table class=\"table table-striped\"><tr><td>Fila 1</td></tr><tr><td>Fila 2</td></tr></table>",
+    "category": "Tables"
+  },
+  {
+    "id": "text-break",
+    "title": ".text-break",
+    "description": "Permite que una palabra larga se divida en varias líneas si es necesario.",
+    "example": "<div class=\"text-break\">Supercalifragilisticoespialidoso</div>",
+    "category": "Typography"
+  },
+  {
+    "id": "text-capitalize",
+    "title": ".text-capitalize",
+    "description": "Convierte la primera letra de cada palabra en mayúscula.",
+    "example": "<div class=\"text-capitalize\">texto en mayúsculas iniciales</div>",
+    "category": "Text"
+  },
+  {
+    "id": "text-center",
+    "title": ".text-center",
+    "description": "Centra horizontalmente el texto.",
+    "example": "<div class=\"text-center\">Texto centrado 🧭</div>",
+    "category": "Text"
+  },
+  {
+    "id": "text-danger",
+    "title": ".text-danger",
+    "description": "Aplica color rojo al texto. Se usa para errores o alertas.",
+    "example": "<p class=\"text-danger\">Este es un error ❌</p>",
+    "category": "Colors"
+  },
+  {
+    "id": "text-decoration-line-through",
+    "title": ".text-decoration-line-through",
+    "description": "Muestra el texto con una línea tachada.",
+    "example": "<span class=\"text-decoration-line-through\">Tachado 📝</span>",
+    "category": "Typography"
+  },
+  {
+    "id": "text-decoration-none",
+    "title": ".text-decoration-none",
+    "description": "Elimina subrayados u otras decoraciones del texto.",
+    "example": "<a href=\"#\" class=\"text-decoration-none\">Enlace sin subrayado</a>",
+    "category": "Text"
+  },
+  {
+    "id": "text-decoration-underline",
+    "title": ".text-decoration-underline",
+    "description": "Subraya el texto.",
+    "example": "<span class=\"text-decoration-underline\">Subrayado ✔️</span>",
+    "category": "Typography"
+  },
+  {
+    "id": "text-lowercase",
+    "title": ".text-lowercase",
+    "description": "Convierte todo el texto a minúsculas.",
+    "example": "<div class=\"text-lowercase\">TEXTO MINÚSCULO</div>",
+    "category": "Text"
+  },
+  {
+    "id": "text-nowrap",
+    "title": ".text-nowrap",
+    "description": "Evita que el texto se divida en varias líneas (no hace salto de línea).",
+    "example": "<div class=\"text-nowrap\">Texto muy largo sin saltos ➡️</div>",
+    "category": "Text"
+  },
+  {
+    "id": "text-primary",
+    "title": ".text-primary",
+    "description": "Aplica el color azul principal de Bootstrap al texto.",
+    "example": "<p class=\"text-primary\">Texto azul 🌊</p>",
+    "category": "Colors"
+  },
+  {
+    "id": "text-success",
+    "title": ".text-success",
+    "description": "Aplica el color verde de éxito al texto.",
+    "example": "<p class=\"text-success\">Correcto ✅</p>",
+    "category": "Colors"
+  },
+  {
+    "id": "text-uppercase",
+    "title": ".text-uppercase",
+    "description": "Convierte el texto a MAYÚSCULAS.",
+    "example": "<div class=\"text-uppercase\">todo en mayúsculas</div>",
+    "category": "Text"
+  },
+  {
+    "id": "text-warning",
+    "title": ".text-warning",
+    "description": "Aplica el color amarillo de advertencia al texto.",
+    "example": "<p class=\"text-warning\">Atención ⚠️</p>",
+    "category": "Colors"
+  },
+  {
+    "id": "text-wrap",
+    "title": ".text-wrap",
+    "description": "Fuerza el salto de línea cuando el contenido sobrepasa el ancho del contenedor.",
+    "example": "<div class=\"text-wrap\" style=\"width: 150px;\">Este texto se ajusta al contenedor</div>",
+    "category": "Typography"
+  },
+  {
+    "id": "thead-dark",
+    "title": ".thead-dark",
+    "description": "(Bootstrap 4) Aplica fondo oscuro y texto claro a los encabezados de tabla.",
+    "example": "<table class=\"table\"><thead class=\"thead-dark\"><tr><th>Encabezado</th></tr></thead></table>",
+    "category": "Tables"
+  },
+  {
+    "id": "thead-light",
+    "title": ".thead-light",
+    "description": "(Bootstrap 4) Aplica fondo claro al encabezado de una tabla.",
+    "example": "<table class=\"table\"><thead class=\"thead-light\"><tr><th>Encabezado</th></tr></thead></table>",
+    "category": "Tables"
+  },
+  {
+    "id": "w-100",
+    "title": ".w-100",
+    "description": "Hace que el elemento ocupe el 100% del ancho disponible.",
+    "example": "<div class=\"w-100 bg-light\">Ancho completo 📏</div>",
+    "category": "Spacing"
+  }
+]

@@ -1,0 +1,95 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <h1 slot="title">Chuleta: Imágenes y efectos | SnackCode</h1>
+
+  <div class="container">
+    <h1 class="mb-4 text-primary">📸 Chuleta: Imágenes y Efectos</h1>
+
+    <section class="mb-5">
+      <h2>Etiqueta &lt;img&gt;</h2>
+      <p>Para insertar una imagen básica:</p>
+      <pre><code>&lt;img src="ruta/imagen.jpg" alt="Descripción de la imagen" /&gt;</code></pre>
+      <ul>
+        <li><code>alt</code>: mejora la accesibilidad y SEO</li>
+        <li>Utiliza <code>srcset</code> para imágenes responsive</li>
+      </ul>
+    </section>
+
+    <section class="mb-5">
+      <h2>✨ Imagen con efecto hover (HTML + JS)</h2>
+      <pre><code>&lt;img 
+    src="imagen1.jpg" 
+    onmouseover="this.src='imagen2.jpg'" 
+    onmouseout="this.src='imagen1.jpg'" 
+    alt="imagen interactiva" /&gt;</code></pre>
+        <p>Al pasar el ratón, cambia la imagen.</p>
+    </section>
+
+    <section class="mb-5">
+      <h2>🎨 Galería con Flexbox + Zoom al pasar</h2>
+      <div class="chuleta-terminal">
+        <code is:raw>
+        &lt;style&gt;
+        .galeria {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card-img-top {
+            transition: transform 0.3s ease;
+            border-radius: 0.5rem;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        &lt;/style&gt;
+
+        &lt;div class=&quot;galeria&quot;&gt;
+        &lt;div class=&quot;card shadow-sm border-0&quot; style=&quot;width: 180px;&quot;&gt;
+            &lt;img src=&quot;img1.jpg&quot; class=&quot;card-img-top&quot; alt=&quot;Imagen 1&quot; /&gt;
+            &lt;div class=&quot;card-body text-center&quot;&gt;
+            &lt;p class=&quot;card-text&quot;&gt;Imagen 1&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        </code>
+        </div>
+
+        <p>Galería de imágenes con efecto zoom al pasar el ratón.</p>
+    </section>
+
+    <section class="mb-5">
+      <h2>Herramientas de optimización</h2>
+      <ul>
+        <li>
+          <a href="https://tinypng.com" target="_blank">TinyPNG</a>: comprimir
+          PNG y JPG
+        </li>
+        <li>
+          <a href="https://squoosh.app" target="_blank">Squoosh</a>: convertir y
+          reducir calidad
+        </li>
+        <li>
+          <a href="https://remove.bg" target="_blank">RemoveBG</a>: quitar fondo
+          de imágenes
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Mini reto</h2>
+      <p>Crea una sección de tu portfolio o galería de productos con:</p>
+      <ul>
+        <li>10 - 15 imágenes optimizadas</li>
+        <li>Un efecto <code>:hover</code></li>
+        <li>Atributos <code>alt</code> bien definidos</li>
+      </ul>
+    </section>
+  </div>
+</Layout>
