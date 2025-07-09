@@ -24,7 +24,7 @@ RUN rm -rf /etc/nginx/conf.d && mkdir /etc/nginx/conf.d
 COPY --from=builder /app/dist /usr/share/nginx/html
 
 # Copia tu configuración optimizada de Nginx
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.http-only.conf /etc/nginx/conf.d/default.conf
 
 # Exponer puerto web
 EXPOSE 80
