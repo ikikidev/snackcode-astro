@@ -25,3 +25,7 @@ pnpm-debug.log*
 
 assets/logo/*
 data/*
+
+# ignore certbot files
+certbot/*
+certbot/
