@@ -1,0 +1,156 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <h1 slot="title">Chuleta: @keyframes y animaciones | SnackCode</h1>
+
+  <div class="container">
+    <h1 class="mb-4 text-primary">🌀 Chuleta: @keyframes en CSS</h1>
+
+    <section class="mb-5">
+      <h2>📘 ¿Qué es <code>@keyframes</code>?</h2>
+      <p>Una regla CSS que permite definir <b>animaciones personalizadas</b> especificando cómo cambia un elemento a lo largo del tiempo.</p>
+      <ul>
+        <li>🎯 Controla etapas intermedias del cambio de estilo</li>
+        <li>🛠️ Se aplica con la propiedad <code>animation</code></li>
+        <li>💡 Ideal para hacer tu web más dinámica y moderna</li>
+      </ul>
+    </section>
+
+    <section class="mb-5">
+      <h2>🛠️ Sintaxis básica</h2>
+      <div class="chuleta-terminal">
+        <code is:raw>
+        @keyframes nombreAnimacion {
+          0% {
+            /* estilo inicial */
+          }
+          100% {
+            /* estilo final */
+          }
+        }
+
+        .mi-elemento {
+          animation: nombreAnimacion 1s ease-out forwards;
+        }
+        </code>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2>🌟 Ejemplo básico: Fade-in</h2>
+      <div class="chuleta-terminal">
+        <code is:raw>
+        &lt;style&gt;
+        @keyframes aparecer {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+
+        .fade-in {
+          animation: aparecer 1s ease-in;
+        }
+        &lt;/style&gt;
+
+        &lt;div class="fade-in"&gt;Hola 👋&lt;/div&gt;
+        </code>
+      </div>
+
+      <div class="preview mt-3">
+        <style>
+          @keyframes aparecer {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+          .fade-in {
+            animation: aparecer 1s ease-in infinite alternate;
+          }
+        </style>
+        <div class="fade-in">Hola 👋</div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2>⚡ Ejemplo avanzado: Slide-in suave</h2>
+      <div class="chuleta-terminal">
+        <code is:raw>
+        &lt;style&gt;
+        @keyframes slideIn {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .elemento {
+          animation: slideIn 0.8s ease-out forwards;
+        }
+        &lt;/style&gt;
+
+        &lt;div class="elemento"&gt;Texto animado&lt;/div&gt;
+        </code>
+      </div>
+
+      <div class="preview mt-3">
+        <style>
+          @keyframes slideIn {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          .elemento {
+            animation: slideIn 0.8s ease-out infinite alternate;
+          }
+        </style>
+        <div class="elemento">Texto animado</div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2>📋 Usos comunes</h2>
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr><th>Animación</th><th>¿Qué hace?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>fade-in / fade-out</code></td><td>Aparecer o desaparecer</td></tr>
+          <tr><td><code>slide in</code></td><td>Entrar desde un lado o desde abajo</td></tr>
+          <tr><td><code>spin / rotate</code></td><td>Girar (logos, íconos…)</td></tr>
+          <tr><td><code>scale / bounce</code></td><td>Latido, rebote o pulso</td></tr>
+          <tr><td><code>progress / loader</code></td><td>Barras de carga animadas</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="mb-5">
+      <h2>🧠 En resumen</h2>
+      <ul>
+        <li><strong>@keyframes</strong> define los <em>pasos</em> de una animación</li>
+        <li>Se aplica con la propiedad <code>animation</code></li>
+        <li>Permite crear interfaces más modernas e intuitivas</li>
+        <li>Se puede combinar con <code>:hover</code>, <code>animation-delay</code> y <code>infinite</code></li>
+      </ul>
+    </section>
+
+    <section class="mb-5">
+      <h2>🎯 Reto</h2>
+      <p>Crea un bloque con texto que:</p>
+      <ul>
+        <li>Use <code>keyframes</code> para aparecer desde la izquierda</li>
+        <li>Tenga un color inicial que cambie en <code>:hover</code></li>
+        <li>Incluya transición suave y sombra</li>
+      </ul>
+    </section>
+  </div>
+</Layout>

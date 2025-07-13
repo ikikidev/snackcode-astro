@@ -11,7 +11,12 @@ import Layout from "../../layouts/Layout.astro";
     <section class="mb-5">
       <h2>Etiqueta &lt;img&gt;</h2>
       <p>Para insertar una imagen básica:</p>
-      <pre><code>&lt;img src="ruta/imagen.jpg" alt="Descripción de la imagen" /&gt;</code></pre>
+       <div class="chuleta-terminal">
+        <code is:raw>
+        &lt;img src="ruta/imagen.jpg" alt="Descripción de la imagen" /&gt;
+        </code>
+       </div>
+      <p class="mt-3">Consejos:</p>
       <ul>
         <li><code>alt</code>: mejora la accesibilidad y SEO</li>
         <li>Utiliza <code>srcset</code> para imágenes responsive</li>
@@ -20,12 +25,16 @@ import Layout from "../../layouts/Layout.astro";
 
     <section class="mb-5">
       <h2>✨ Imagen con efecto hover (HTML + JS)</h2>
-      <pre><code>&lt;img 
-    src="imagen1.jpg" 
-    onmouseover="this.src='imagen2.jpg'" 
-    onmouseout="this.src='imagen1.jpg'" 
-    alt="imagen interactiva" /&gt;</code></pre>
-        <p>Al pasar el ratón, cambia la imagen.</p>
+       <div class="chuleta-terminal">
+        <code is:raw>
+        &lt;img 
+            src="imagen1.jpg" 
+            onmouseover="this.src='imagen2.jpg'" 
+            onmouseout="this.src='imagen1.jpg'" 
+            alt="imagen interactiva" /&gt;
+        </code>
+       </div>
+        <p class="mt-3">Al pasar el ratón, cambia la imagen.</p>
     </section>
 
     <section class="mb-5">
@@ -61,7 +70,7 @@ import Layout from "../../layouts/Layout.astro";
         </code>
         </div>
 
-        <p>Galería de imágenes con efecto zoom al pasar el ratón.</p>
+        <p class="mt-3">Galería de imágenes con efecto zoom al pasar el ratón.</p>
     </section>
 
     <section class="mb-5">
@@ -91,5 +100,68 @@ import Layout from "../../layouts/Layout.astro";
         <li>Atributos <code>alt</code> bien definidos</li>
       </ul>
     </section>
+  
+<section class="mb-5">
+  <h2>📏 Peso recomendado por tipo de imagen</h2>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr><th>Tipo de imagen</th><th>Peso máximo recomendado</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Miniaturas (thumbnails)</td><td>≤ 100 KB</td></tr>
+      <tr><td>Imágenes en contenido</td><td>≤ 300 KB</td></tr>
+      <tr><td>Banner principal (hero)</td><td>≤ 500 KB</td></tr>
+      <tr><td>Fondo de pantalla completo</td><td>≤ 1 MB</td></tr>
+    </tbody>
+  </table>
+  <p><strong>🧠 Consejo:</strong> Para móviles o accesibilidad, intenta que no superen los <strong>200 KB</strong>.</p>
+</section>
+
+<section class="mb-5">
+  <h2>🚨 ¿Qué pasa si hay muchas imágenes?</h2>
+  <ul>
+    <li>📶 Aumentan los tiempos de carga</li>
+    <li>🧠 Saturan la memoria del navegador</li>
+    <li>📉 Dificultan el SEO y la accesibilidad</li>
+  </ul>
+</section>
+
+<section class="mb-5">
+  <h2>🧩 Estrategias de optimización</h2>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr><th>Estrategia</th><th>Descripción</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Optimización de peso</td><td>Comprimir imágenes (WebP, TinyPNG, Squoosh...)</td></tr>
+      <tr><td><code>loading="lazy"</code></td><td>Carga diferida solo si la imagen es visible</td></tr>
+      <tr><td><code>&lt;picture&gt; + srcset</code></td><td>Versiones diferentes según el dispositivo</td></tr>
+      <tr><td>Sprites CSS o SVG</td><td>Ideal para iconos pequeños</td></tr>
+      <tr><td>Galerías o paginación</td><td>No mostrar todas las imágenes a la vez</td></tr>
+      <tr><td>CDN</td><td>Servidores cercanos para entregar más rápido</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="mb-5">
+  <h2>🧪 Ejemplo de carga diferida (lazy loading)</h2>
+  <div class="chuleta-terminal">
+    <code is:raw>
+    &lt;img src="img/foto1.webp" loading="lazy" alt="Descripción" width="300"&gt;
+    &lt;img src="img/foto2.webp" loading="lazy" alt="Descripción" width="300"&gt;
+    </code>
+  </div>
+</section>
+
+<section class="mb-5">
+  <h2>✅ Buenas prácticas generales</h2>
+  <ul>
+    <li>Usa siempre <code>alt</code> para accesibilidad</li>
+    <li>Comprime antes de subir</li>
+    <li>Evita imágenes decorativas innecesarias</li>
+    <li>Prefiere WebP o AVIF si están soportados</li>
+  </ul>
+</section>
+
   </div>
 </Layout>

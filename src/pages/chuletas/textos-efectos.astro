@@ -1,0 +1,208 @@
+
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <h1 slot="title">Chuleta: Efectos en Textos | SnackCode</h1>
+
+  <div class="container">
+    <h1 class="mb-4 text-primary">💥 Chuleta: Efectos en Textos</h1>
+
+    <section class="mb-5">
+      <h2>🎯 Propiedades clave</h2>
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Propiedad</th>
+            <th>¿Qué hace?</th>
+            <th>Ejemplo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>text-shadow</code></td>
+            <td>Sombra detrás del texto</td>
+            <td><code>2px 2px 5px #888</code></td>
+          </tr>
+          <tr>
+            <td><code>transform</code></td>
+            <td>Escala, rotación o movimiento</td>
+            <td><code>scale(1.2)</code></td>
+          </tr>
+          <tr>
+            <td><code>transition</code></td>
+            <td>Suaviza los cambios</td>
+            <td><code>all 0.3s ease</code></td>
+          </tr>
+          <tr>
+            <td><code>@keyframes</code></td>
+            <td>Define los pasos de una animación</td>
+            <td><code>from {} to {}</code></td>
+          </tr>
+          <tr>
+            <td><code>animation</code></td>
+            <td>Ejecuta una animación</td>
+            <td><code>mover 2s infinite</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="mb-5">
+      <h2>🌈 Título con efectos visuales</h2>
+      <div class="chuleta-terminal">
+        <code is:raw>
+        &lt;style&gt;
+        .titulo-efecto {
+          font-size: 2.5rem;
+          color: #4fc3f7;
+          text-shadow: 2px 2px 8px #ff85c1;
+          transition: transform 0.3s ease;
+        }
+        .titulo-efecto:hover {
+          transform: scale(1.1);
+        }
+        &lt;/style&gt;
+
+        &lt;h1 class="titulo-efecto"&gt;Bienvenid@ a SnackCode&lt;/h1&gt;
+        </code>
+      </div>
+      <div class="preview mt-3">
+        <style>
+          .titulo-efecto {
+            font-size: 2.5rem;
+            color: #4fc3f7;
+            text-shadow: 2px 2px 8px #ff85c1;
+            transition: transform 0.3s ease;
+          }
+          .titulo-efecto:hover {
+            transform: scale(1.1);
+          }
+        </style>
+        <h1 class="titulo-efecto">Bienvenid@ a SnackCode</h1>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2>📽️ Animación con <code>@keyframes</code></h2>
+      <div class="chuleta-terminal">
+        <code is:raw>
+        &lt;style&gt;
+        @keyframes entrada {
+          from {
+            transform: translateX(-100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        .titulo-animado {
+          animation: entrada 1s ease-in-out;
+        }
+        &lt;/style&gt;
+
+        &lt;h2 class="titulo-animado"&gt;Textos con efecto&lt;/h2&gt;
+        </code>
+      </div>
+      <div class="preview mt-3">
+        <style>
+          @keyframes entrada {
+            from {
+              transform: translateX(-100%);
+              opacity: 0;
+            }
+            to {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+          .titulo-animado {
+            animation: entrada 2s ease-in-out infinite;
+          }
+        </style>
+        <h2 class="titulo-animado">Textos con efecto</h2>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2>⌨️ Efecto máquina de escribir</h2>
+      <div class="chuleta-terminal">
+        <code is:raw>
+        &lt;style&gt;
+        .escribir {
+          width: 22ch;
+          white-space: nowrap;
+          overflow: hidden;
+          border-right: 3px solid #5a4fcf;
+          animation: escribirBorrar 10s steps(22) infinite;
+        }
+        @keyframes escribirBorrar {
+          0% { width: 0 }
+          40% { width: 22ch }
+          60% { width: 37ch }
+          100% { width: 0 }
+        }
+        &lt;/style&gt;
+
+        &lt;p class="escribir"&gt;Esto es un texto con efecto máquina.&lt;/p&gt;
+        </code>
+      </div>
+      <div class="preview mt-3">
+        <style>
+          .escribir {
+            width: 22ch;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid #5a4fcf;
+            animation: escribirBorrar 10s steps(22) infinite;
+            font-family: monospace;
+            font-size: 1.2rem;
+            color: var(--color-primary, #4fc3f7);
+          }
+
+          @keyframes escribirBorrar {
+            0% { width: 0 }
+            40% { width: 22ch }
+            60% { width: 37ch }
+            100% { width: 0 }
+          }
+        </style>
+        <p class="escribir">Esto es un texto con efecto máquina.</p>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2>🧪 Mini reto</h2>
+      <p>Crea un encabezado con:</p>
+      <ul>
+        <li>Una animación personalizada (<code>@keyframes</code>)</li>
+        <li>Un <code>hover</code> que cambie color o tamaño</li>
+        <li>Un <code>text-shadow</code> llamativo</li>
+      </ul>
+    </section>
+
+    <section class="mb-5">
+      <h2>🎓 Ejercicio creativo</h2>
+      <p>Diseña una portada que "hable" aplicando al menos:</p>
+      <ul>
+        <li>1 <code>text-shadow</code> elegante</li>
+        <li>1 <code>animation</code> sencilla (entrada o zoom)</li>
+        <li>1 <code>transition</code> suave en <code>:hover</code></li>
+        <li><strong>Bonus:</strong> Efecto 3D con <code>rotateX</code> o texto con gradiente</li>
+      </ul>
+    </section>
+
+    <section class="mb-5">
+      <h2>🔧 Herramientas útiles</h2>
+      <ul>
+        <li><a href="https://css-tricks.com/almanac/properties/t/text-shadow/" target="_blank">Guía de text-shadow</a></li>
+        <li><a href="https://animista.net" target="_blank">Animista</a>: genera animaciones CSS</li>
+        <li><a href="https://cssgradient.io" target="_blank">CSS Gradient</a>: fondo y texto con gradientes</li>
+      </ul>
+    </section>
+  </div>
+</Layout>

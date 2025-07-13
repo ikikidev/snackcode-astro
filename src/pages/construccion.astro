@@ -1,0 +1,36 @@
+
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <h1 slot="title">SnackCode - En Construcción</h1>
+
+  <div class="container d-flex justify-content-center align-items-center">
+    <div class="text-center p-4 rounded-2xl shadow-lg animate-fade-in">
+      <img src="img/EnObrasWeb.png" alt="Obra en construcción" class="mx-auto mb-4" style="max-width: 180px;" />
+      <h1 class="text-2xl font-bold mb-2 p-3" style="color:var(--color-rose-pink)">Estamos construyendo algo genial 🚧</h1>
+      <p class="text-gray-700 mb-4">
+        Gracias por tu paciencia. Muy pronto <span style="color:var(--color-neon-blue)">SnackCode</span> estará disponible con recursos y actividades nuevas.
+      </p>
+      <p class="text-sm text-gray-500">¿Tienes dudas? <a href="mailto:ikikidev.lab@gmail.com" class="hover:underline">Contáctanos</a></p>
+    </div>
+  </div>
+
+  <style>
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</Layout>

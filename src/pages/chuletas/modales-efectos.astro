@@ -1,0 +1,177 @@
+
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <h1 slot="title">Chuleta: Modales, Overlays y Efectos Visuales | SnackCode</h1>
+
+  <div class="container">
+    <h1 class="mb-4 text-primary">🎬 Chuleta: Modales, Overlays y Efectos Combinados</h1>
+
+    <section class="mb-5">
+      <h2>🎯 Objetivo</h2>
+      <p>Aprender a combinar <code>position</code>, <code>z-index</code>, <code>opacity</code>, <code>transform</code>, <code>transition</code> y <code>@keyframes</code> para crear modales, overlays y animaciones visuales fluidas.</p>
+    </section>
+
+    <section class="mb-5">
+      <h2>💡 Propiedades clave</h2>
+      <table class="table table-bordered table-hover">
+        <thead><tr><th>Propiedad</th><th>Función</th></tr></thead>
+        <tbody>
+          <tr><td><code>position</code></td><td>Controla la posición (<code>relative</code>, <code>absolute</code>, <code>fixed</code>)</td></tr>
+          <tr><td><code>z-index</code></td><td>Orden de apilamiento (capas)</td></tr>
+          <tr><td><code>opacity</code></td><td>Transparencia del elemento</td></tr>
+          <tr><td><code>pointer-events</code></td><td>Permite o bloquea interacción</td></tr>
+          <tr><td><code>transform</code></td><td>Movimiento, rotación, escala</td></tr>
+          <tr><td><code>transition</code></td><td>Animación suave entre estados</td></tr>
+          <tr><td><code>@keyframes</code></td><td>Animaciones personalizadas</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="mb-5">
+      <h2>🪄 Modal emergente personalizado</h2>
+      <div class="chuleta-terminal">
+        <code is:raw>
+        &lt;button onclick="document.getElementById('modal').classList.add('show')"&gt;Ver más&lt;/button&gt;
+
+        &lt;div id="modal" class="modal-cybercute"&gt;
+          &lt;div class="modal-contenido"&gt;
+            &lt;button class="cerrar" onclick="document.getElementById('modal').classList.remove('show')"&gt;×&lt;/button&gt;
+            &lt;h2&gt;Detalles del producto&lt;/h2&gt;
+            &lt;p&gt;Este modal usa position + z-index + transition&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        </code>
+      </div>
+      <div class="chuleta-terminal mt-3">
+        <code is:raw>
+        .modal-cybercute {
+          position: fixed;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          background-color: rgba(0, 0, 0, 0.6);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.3s ease;
+          z-index: 1000;
+        }
+
+        .modal-cybercute.show {
+          opacity: 1;
+          pointer-events: auto;
+        }
+
+        .modal-contenido {
+          background: white;
+          padding: 2rem;
+          border-radius: 1rem;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+          transform: translateY(-30px);
+          transition: transform 0.3s ease;
+        }
+
+        .modal-cybercute.show .modal-contenido {
+          transform: translateY(0);
+        }
+
+        .cerrar {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          background: transparent;
+          font-size: 1.5rem;
+          border: none;
+          cursor: pointer;
+        }
+        </code>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2>🧪 Ficha con Overlay al pasar</h2>
+      <p>Al pasar el ratón sobre un producto aparece una capa con botón.</p>
+      <div class="chuleta-terminal">
+        <code is:raw>
+        &lt;div class="producto"&gt;
+          &lt;img src="producto.jpg" alt="Producto" /&gt;
+          &lt;div class="overlay"&gt;
+            &lt;button&gt;Ver más&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        .producto {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .overlay {
+          position: absolute;
+          inset: 0;
+          background-color: rgba(0,0,0,0.5);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .producto:hover .overlay {
+          opacity: 1;
+        }
+        </code>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2>📦 Mini proyecto: animaciones de entrada</h2>
+      <p>Crear una sección donde tarjetas u objetos entren desde distintas direcciones.</p>
+      <div class="chuleta-terminal">
+        <code is:raw>
+        @keyframes entrar-izquierda {
+          from {
+            transform: translateX(-100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        .elemento-entrada {
+          animation: entrar-izquierda 1s ease-out;
+        }
+        </code>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2>🎨 Ideas para animaciones</h2>
+      <table class="table table-bordered table-hover">
+        <thead><tr><th>Dirección</th><th>Transformación</th></tr></thead>
+        <tbody>
+          <tr><td>Desde la izquierda</td><td><code>translateX(-100%) → 0</code></td></tr>
+          <tr><td>Desde la derecha</td><td><code>translateX(100%) → 0</code></td></tr>
+          <tr><td>Desde abajo</td><td><code>translateY(100%) → 0</code></td></tr>
+          <tr><td>Desde arriba</td><td><code>translateY(-100%) → 0</code></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="mb-5">
+      <h2>🧠 Reto final: rediseño con efectos</h2>
+      <ul>
+        <li>✔️ Una animación suave usando <code>transition</code> o <code>@keyframes</code></li>
+        <li>✔️ Un modal u overlay funcional</li>
+        <li>✔️ Un efecto visual en texto (hover, sombra, entrada...)</li>
+      </ul>
+      <p><strong>Consejo:</strong> Puedes modificar una sección de tu portfolio o crear una nueva. El foco es en usar bien las técnicas.</p>
+    </section>
+
+  </div>
+</Layout>

@@ -212,5 +212,24 @@ document.addEventListener("click", function (e) {
   }
 });
 
+function abrirAyuda(){
+     window.open("../ayuda.html", "Ayuda", "width=300,height=400,top=100,left=100");
+}
 
+function abrirVentanaHija(){
+     const contenido = `
+              <html>
+              <head><title>Hija</title></head>
+              <body style='font-family:sans-serif;text-align:center;padding:2rem'>
+                <h2>Ventana hija</h2>
+                <button onclick="window.opener.document.getElementById('mensaje-preview').textContent = 'Hola desde la ventana hija 👋'">
+                  Enviar mensaje a la principal
+                </button>
+              </body>
+              </html>
+            `;
+            const nuevaVentana = window.open("", "HijaDemo", "width=400,height=250");
+            nuevaVentana.document.write(contenido);
+            nuevaVentana.document.close();
+}
 

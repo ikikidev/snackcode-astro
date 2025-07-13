@@ -1,0 +1,135 @@
+
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <h1 slot="title">Chuleta: Ventanas y Pop-ups | SnackCode</h1>
+
+  <div class="container">
+    <h1 class="mb-4 text-primary">🪟 Chuleta: Ventanas Emergentes con JavaScript</h1>
+
+    <section class="mb-5">
+      <h2>📘 Objeto <code>window</code></h2>
+      <p><code>window</code> representa la ventana del navegador y es el objeto global de JavaScript en el navegador.</p>
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr><th>Método / Propiedad</th><th>¿Para qué sirve?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>window.open()</code></td><td>Abre una nueva ventana o pestaña</td></tr>
+          <tr><td><code>window.close()</code></td><td>Cierra la ventana abierta</td></tr>
+          <tr><td><code>window.opener</code></td><td>Referencia a la ventana que abrió la actual</td></tr>
+          <tr><td><code>alert()</code></td><td>Muestra un mensaje emergente</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="mb-5">
+      <h2>🚀 Ejemplo básico: abrir una ventana</h2>
+      <div class="chuleta-terminal">
+        <code is:raw>
+        &lt;button onclick="abrirVentana()"&gt;Abrir mensaje&lt;/button&gt;
+
+        &lt;script&gt;
+        function abrirVentana() {
+          window.open(
+            "https://snackcode.ikikidev.es",
+            "SnackCode",
+            "width=400,height=300"
+          );
+        }
+        &lt;/script&gt;
+        </code>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2>💬 Comunicación entre ventanas</h2>
+      <div class="alert alert-info mt-3">
+        💡 <strong>Consejo:</strong> Usa la extensión <strong>Live Server</strong> en VS Code para que la <code>ventana madre</code> y la <code>ventana hija</code> se sirvan desde el mismo origen. Así evitarás errores de seguridad al comunicar ventanas.
+      </div>
+
+      <p>Permite que una ventana secundaria envíe información a la principal.</p>
+      <h5>Ventana principal:</h5>
+      <div class="chuleta-terminal">
+        <code is:raw>
+        &lt;button onclick="abrir()"&gt;Abrir hija&lt;/button&gt;
+        &lt;p id="mensaje"&gt;&lt;/p&gt;
+
+        &lt;script&gt;
+        let hija;
+        function abrir() {
+          hija = window.open("hija.html", "Hija", "width=400,height=200");
+        }
+        function recibirMensaje(texto) {
+          document.getElementById("mensaje").textContent = texto;
+        }
+        &lt;/script&gt;
+        </code>
+      </div>
+
+      <h5 class="mt-3">Ventana hija:</h5>
+      <div class="chuleta-terminal">
+        <code is:raw>
+        &lt;button onclick="enviar()"&gt;Enviar mensaje a la principal&lt;/button&gt;
+
+        &lt;script&gt;
+        function enviar() {
+          if (window.opener) {
+            window.opener.recibirMensaje("Hola desde la ventana hija 👋");
+          }
+        }
+        &lt;/script&gt;
+        </code>
+      </div>
+
+      <div class="preview mt-3">
+        <button onclick="abrirVentanaHija()">Abrir hija ✌️</button>
+        <p id="mensaje-preview" style="margin-top: 10px;"></p>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2>❓ Botón de ayuda contextual</h2>
+      <p>Una mini ventana flotante con consejos o atajos.</p>
+      <div class="chuleta-terminal">
+        <code is:raw>
+        &lt;button onclick="abrirAyuda()"&gt;❓ Ayuda&lt;/button&gt;
+
+        &lt;script&gt;
+        function abrirAyuda() {
+          window.open("ayuda.html", "Ayuda", "width=300,height=400,top=100,left=100");
+        }
+        &lt;/script&gt;
+        </code>
+      </div>
+
+       <div class="preview mt-3">
+        <button onclick="abrirAyuda()">❓ Ayuda</button>
+        <p id="mensaje-preview" style="margin-top: 10px;"></p>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2>⚠️ Debate: ¿por qué se bloquean los pop-ups?</h2>
+      <ul>
+        <li>❌ Se usaban para publicidad intrusiva</li>
+        <li>🚫 Algunas se abrían sin clic del usuario</li>
+        <li>🔒 Podían confundir o engañar al usuario</li>
+      </ul>
+      <p>✅ Ahora los navegadores solo permiten ventanas abiertas con interacción directa del usuario.</p>
+    </section>
+
+    <section class="mb-5">
+      <h2>🎯 Reflexión final</h2>
+      <ul>
+        <li>¿Dónde sería útil usar una ventana emergente?</li>
+        <li>¿Qué riesgos existen si se abusa de ellas?</li>
+        <li>¿Has visto buenos usos de pop-ups?</li>
+      </ul>
+    </section>
+
+  </div>
+   <script src="/js/main.js" defer></script>
+</Layout>
