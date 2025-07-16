@@ -1,0 +1,68 @@
+---
+import db from '../../lib/db.js';
+import Layout from "../../layouts/Layout.astro";
+
+const ids = await db('repaso_unidades_formativas')
+  .select('pregunta_id')
+  .groupBy('pregunta_id')
+  .orderByRaw('RAND()')
+  .limit(15);
+
+const idList = ids.map(obj => obj.pregunta_id);
+
+const preguntasRaw = await db('repaso_unidades_formativas')
+  .whereIn('pregunta_id', idList)
+  .orderBy(['pregunta_id', 'opcion_respuesta']);
+
+const preguntas = Object.values(
+  preguntasRaw.reduce((acc, item) => {
+    const id = item.pregunta_id;
+    if (!acc[id]) {
+      acc[id] = {
+        id,
+        enunciado: item.pregunta,
+        correcta: item.respuesta_correcta,
+        opciones: [],
+      };
+    }
+    acc[id].opciones.push(item.opcion_respuesta);
+    return acc;
+  }, {})
+);
+
+const respuestasCorrectas = {};
+for (const p of preguntas) {
+  respuestasCorrectas["q" + p.id] = p.correcta;
+}
+---
+
+<Layout>
+  <div id="testContainer">
+    <h1>🧠 Test de repaso UF1306</h1>
+
+    <form id="testForm">
+      {preguntas.map((p, index) => (
+        <fieldset id={`pregunta-${p.id}`}>
+          <legend><strong>{index + 1}.</strong> {p.enunciado}</legend>
+          {p.opciones.map((op) => (
+            <label>
+              <input type="radio" name={`q${p.id}`} value={op} />
+              {op}
+            </label>
+          ))}
+        </fieldset>
+      ))}
+      <button id="comprobarBtn" type="button">Comprobar respuestas</button>
+    </form>
+
+    <p id="resultado" style="font-weight: bold; font-size: 1.2rem;"></p>
+  </div>
+
+  <!-- ✅ JSON válido embebido -->
+<script type="application/json" id="respuestas-json" set:html={JSON.stringify(respuestasCorrectas).replace(/</g, '\\u003c')} />
+
+
+  <!-- ✅ Script externo -->
+   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
+  <script src="/js/uf1306.js" defer></script>
+</Layout>
